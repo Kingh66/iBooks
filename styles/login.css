@@ -1,0 +1,220 @@
+/* Base Styles */
+:root {
+    --primary-color: #e74c3c;
+    --secondary-color: #DAA520; /* Gold from your logo */
+    --accent-color: #e74c3c;
+    --text-dark: #2C3E50;
+    --text-light: #ECF0F1;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* Logo Styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo svg {
+    width: 50px;
+    height: 75px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-text {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 4.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 440px;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-2px);
+}
+
+/* Header */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h1 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.login-header p {
+    color: #7F8C8D;
+    margin-top: 0.5rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+input[type="email"],
+input[type="password"],
+#loginButton {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #BDC3C7;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+}
+
+/* Password Field Container */
+.password-field {
+    position: relative;
+}
+
+/* Password Input */
+.password-field input[type="password"],
+.password-field input[type="text"] {
+    width: 100%;
+    padding: 0.875rem 2.5rem 0.875rem 1rem; /* Right padding for toggle button */
+    border: 2px solid #BDC3C7;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Password Toggle Button */
+.password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #7F8C8D;
+    cursor: pointer;
+    padding: 0.25rem;
+    z-index: 1; /* Ensures button stays above input */
+}
+.password-toggle:hover {
+    color: var(--primary-color); /* Change color on hover */
+    background: rgba(173, 80, 68, 0.1); /* Subtle background on hover */
+}
+
+.password-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(173, 101, 68, 0.4); /* Focus state for accessibility */
+}
+
+/* Error Message */
+
+/* Submit Button */
+#loginButton {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#loginButton:hover {
+    background: var(--accent-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 52, 131, 0.3);
+}
+
+/* Links */
+.auth-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .logo {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo-text {
+        font-size: 2rem;
+    }
+    
+    .logo-text::after {
+        bottom: -0.6rem;
+        font-size: 0.7rem;
+    }
+}
