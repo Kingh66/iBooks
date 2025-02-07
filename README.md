@@ -5,7 +5,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql)](https://www.mysql.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-![iBooks Live Demo](https://ibooks.onrender.com/) 
+![iBooks Live Demo]  https://ibooks.onrender.com/
 
 ### Key Features
 - 🛒 **Shopping Cart System** with quantity management
