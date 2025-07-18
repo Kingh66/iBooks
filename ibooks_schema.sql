@@ -1,4 +1,6 @@
+CREATE DATABASE IF NOT EXISTS ibooks_databases;
 
+USE ibooks_databases;
 
 CREATE TABLE IF NOT EXISTS `password_resets` (
   `reset_id` INT NOT NULL AUTO_INCREMENT,
